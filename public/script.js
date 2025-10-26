@@ -16,6 +16,10 @@ document.addEventListener('DOMContentLoaded', () => {
 
             const data = await res.json();
             document.getElementById('message').textContent = data.message;
+
+            if (data.success) {
+                window.location.href = 'dashboard.html';
+            }
         });
     }
 
